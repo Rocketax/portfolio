@@ -1075,11 +1075,11 @@ Header sticky
     background-position: right top;
 }
 .header-top2 {
-    background: url(../images/Encage/encage.png);
-    background-size: cover;
+    background: url(../images/Heritage/banner-heritage.png);
+    background-size: contain;
     background-repeat: no-repeat;
     padding-bottom: 50px;
-    background-position: right top;
+    background-position: center center;
     min-height: 550px;
 }
  .logo a {
