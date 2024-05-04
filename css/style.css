@@ -1080,10 +1080,18 @@ Header sticky
     background-repeat: no-repeat;
     padding-bottom: 50px;
     background-position: center center;
-    min-height: 550px;
+    min-height: 625px;
 }
 .headerHamstorm {
     background: url(../images/Hamstorm/banner-hamstorm.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    background-position: center center;
+    min-height: 625px;
+}
+.headerBambooza {
+    background: url(../images/Bambooza/bambooza.png);
     background-size: contain;
     background-repeat: no-repeat;
     padding-bottom: 50px;
@@ -1215,10 +1223,29 @@ Header sticky
      padding: 10px 27px;
      display: inline-block;
 }
+.our .Games p a {
+    font-size: 17px;
+     border: 0px;
+     background-color: white;
+     color: #008cff;
+     padding: 0px;
+}
+h3 a {
+    font-size: 17px;
+     border: 0px;
+     background-color: white;
+     color: #008cff;
+     padding: 0px;
+}
  .our .Games a:hover {
      background-color: #ff0000;
      border: #ff0000 solid 1px;
      color: #fff;
+}
+.our .Games p a:hover {
+    background-color: white;
+    border: 0px;
+    color: #667ba8;
 }
 /** end our section **/
 /** We_are section **/

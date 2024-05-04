@@ -61,8 +61,8 @@
                                                 <li> <a href="./index.html#">Accueil</a> </li>
                                                 <li> <a href="./index.html#games">Jeux</a> </li>
                                                 <li> <a href="./index.html#about">À propos</a> </li>
-                                                <li> <a href="./Hamstorm.html">Hamstörm</a> </li>
                                                 <li> <a href="./Heritage.html">Héritage</a> </li>
+                                                <li> <a href="./Bambooza.html">Bambooza</a> </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -167,9 +167,9 @@
                     <h2><u>Mouvement tour par tour</u></h2>
                     <h3 style="margin-bottom: 40px;">
                         Comme le jeu comporte un système de tour par tour, nous avons du implémenter un système qui permet aux différents
-                        personnages de se déplacer seulement quand c'est leur tour. Les tours sont implémentés comme suit: Hamstörm bouge en
-                        premier et termine son tour seulement quand il a terminé de bouger. Il peut donc faire des actions bonus pendant son
-                        tour comme briser des rochers ou encore prendre un tuyau tant qu'il n'a pas bougé. Ensuite, c'est au tour des rats et
+                        personnages de se déplacer seulement quand c'est leur tour. Les tours sont implémentés comme suit: Hamstörm commence
+                        et termine son tour seulement quand il a terminé de bouger. Il peut donc faire des actions bonus pendant son
+                        tour comme briser des rochers ou encore prendre un tuyau tant qu'il est immobile. Ensuite, c'est au tour des rats et
                         une fois qu'ils ont terminé de bouger, le tour se termine et la boucle recommence.
                     </h3>
                     <div class="row">
@@ -179,8 +179,8 @@
                     </div>
                     <h2><u>Comportement de Hamstörm</u></h2>
                     <h3 style="margin-bottom: 40px;">
-                        Le comportement de Hamstörm est assez simple. Lorsqu'on clique sur une tuile, il ira sur cette dernière. Lorsqu'on
-                        clique sur un objet destructible en étant sur la case adjacente et en ayant une pioche, il détruit ce dernier. Lorsqu'on
+                        Le comportement de Hamstörm est assez simple. Lorsqu'on clique sur une tuile, il ira sur cette dernière. cliquer
+                        sur un objet destructible en étant sur la case adjacente et en ayant une pioche le détruit. Lorsqu'on
                         clique sur un tuyau en étant sur la case adjacente, il prend le tuyau et se rend à l'autre bout. Par contre, 
                         nous devons savoir ce qui se trouve aux alentours de Hamstörm pour gérer les différentes actions qu'il peut faire.
                         Pour se faire, au début de chaque tour et après certaines actions, nous analysons les alentours de Hamstörm pour savoir
@@ -279,9 +279,9 @@
                         où chaque tour a une liste d'actions qu'on garde en mémoire, on rempli cette pile au fur et à mesure des tours. Chaque
                         action garde en mémoire différentes données comme des positions, des références vers les acteurs, etc. Lorsqu'on
                         revient en arrière, on dépile le dernier tour et on annule chacune des actions faites au cours du tour en fonction des
-                        données présentes dans l'action. Nous utilisons une pile pour s'assurer que les tours soient annulés dans le même ordre
+                        données présentes dans l'action. Nous utilisons une pile pour s'assurer que les tours soient annulés dans l'ordre inverse
                         qu'ils ont été joués. En pratique, il nous a causé énormément de problèmes. Il y avait souvent des petils détails qu'on
-                        oubliait de faire revenir en arrière, ce qui faisaient en sorte que le retour en arrière ne fonctionnait pas comme prévu.
+                        oubliait de faire revenir en arrière, ce qui faisait en sorte que le retour en arrière ne fonctionnait pas comme prévu.
                     </h3>
                     <div class="row">
                         <div class="col-md-2"></div>
@@ -317,12 +317,12 @@
                 </div>
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 class="margin_bottom">Défis de conception</h2>
+                        <h2>Défis de conception</h2>
                         <h3>
                             Le plus gros défi a été au niveau de la synchronisation des tours, ce qui a causé énormément de problème lors du
                             retour en arrière. Chaque action devait être dans le bon tour, sinon le retour en arrière n'annulait pas toutes les
                             actions qu'il devait pour le tour en question. Nous avons du mettre plusieurs conditions pour régler ce type de
-                            problème, comme par exemple, attendre que les projectiles ait terminé de bouger. Cela faisait en sorte que le tour
+                            problème, comme par exemple, attendre que les projectiles aient terminé de bouger. Cela faisait en sorte que le tour
                             se terminait et que le rat mourait dans le tour suivant. On devait donc revenir en arrière de deux tours au lieu de
                             juste un. Un autre défi a été de synchroniser toutes les actions avec les visuels de notre jeu (avec la coopération
                             de notre artiste technique). Cela a également été la source de plusieurs bugs au travers du développement. En somme,
