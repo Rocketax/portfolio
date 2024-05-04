@@ -42,7 +42,7 @@
     <!-- header -->
     <header>
         <!-- header inner -->
-        <div class="header-top2">
+        <div class="headerHeritage">
             <div class="header" id="myHeader">
                 <div class="container-fluid">
                     <div class="row">
@@ -61,6 +61,7 @@
                                                 <li> <a href="./index.html#">Accueil</a> </li>
                                                 <li> <a href="./index.html#games">Jeux</a> </li>
                                                 <li> <a href="./index.html#about">À propos</a> </li>
+                                                <li> <a href="./Hamstorm.html">Hamstörm</a> </li>
                                                 <li> <a href="./Heritage.html">Héritage</a> </li>
                                             </ul>
                                         </nav>
@@ -94,6 +95,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
+                        <p data-string="projects-encage-link">
+                            <a href="https://chaos-production.itch.io/heritage" target="_blank">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title"><strong>Cliquez ici pour essayer le jeu!</strong></h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
                         <h2>Description du jeu</h2>
                     </div>
                 </div>
@@ -106,10 +122,24 @@
                         confection de divers articles de vanité. Cette tradition est issue de la compagnie familiale,
                         une compagnie de plus de 100 ans, qui se spécialise
                         dans la confection de divers articles et vêtements faits avec des plumes. Dans le jeu, on se
-                        plonge dans la vie de la jeune femme où elle doit
-                        attraper des oiseaux pour compléter les commandes des clients de la compagnie familiale.
+                        plonge dans la vie de la jeune femme qui doit attraper des oiseaux pour compléter les
+                        commandes des clients de la compagnie familiale.
                     </h3>
 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Trailer du jeu</h2>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <video controls width="100%">
+                            <source src="images/Heritage/Heritage_Trailer.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,7 +154,7 @@
                         <h3>
                             Je me suis occupé principalement de la programmation du mouvement de l'oiseau et j'ai
                             contribué au développement de son comportement. J'ai également fait
-                            l'intégration des commandes au interface utilisateur et j'ai travaillé sur la mécanique de graine.
+                            l'intégration des commandes dans l'interface utilisateur et j'ai travaillé sur la mécanique de graine.
                             La suite vous expliquera comment les différentes fonctionnalités sont implémentées.
                         </h3>
                     </div>
@@ -183,7 +213,7 @@
                     <h2 class=""><u>Mécanique de graine</u>
                     </h2>
                     <h3>
-                        Pour pouvoir capturer les oiseaux qui sont en hauteur, nous avons implémenté une mécanique de graine. Celle-ci permet d'attirer les oiseaux. Ils s'envole
+                        Pour pouvoir capturer les oiseaux qui sont en hauteur, nous avons implémenté une mécanique de graine. Celle-ci permet d'attirer les oiseaux. Ils s'envolent
                         vers la graine et la mangent pendant un certain temps. J'ai participé à la détection de la graine par l'oiseau et également au mouvement de l'oiseau vers
                         elle. L'oiseau détecte la graine si elle est dans un certain rayon autour de lui. Ensuite, si son état le permet (il doit être calme et non entrain de
                         se sauver par exemple) il ira vers la graine et y restera pendant quelques temps. Pendant que l'oiseau mange la graine, il est moins sensible au joueur. Ses

@@ -1074,8 +1074,16 @@ Header sticky
     min-height: 980px;
     background-position: right top;
 }
-.header-top2 {
+.headerHeritage {
     background: url(../images/Heritage/banner-heritage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    background-position: center center;
+    min-height: 550px;
+}
+.headerHamstorm {
+    background: url(../images/Hamstorm/banner-hamstorm.png);
     background-size: contain;
     background-repeat: no-repeat;
     padding-bottom: 50px;
@@ -1260,6 +1268,36 @@ Header sticky
      background-color: #ff0000;
      border: #ff0000 solid 1px;
      color: #fff;
+}
+.card-url {
+    text-decoration: none;
+    color: black;
+}
+
+.card-url div:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 3px 3px #bbb;
+}
+
+.card-url div {
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    transition: ease-in-out 0.3s;
+    margin-bottom: 25px;
+}
+
+.card-url h2 {
+    margin-top: 0px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.card-url p {
+    margin-top: 8px;
+    margin-bottom: 1px;
 }
 /** end We_are section **/
 /** about section **/
