@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <script src="js/portfolio.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -58,14 +59,16 @@
                                         </a>
                                         <nav class="main-menu">
                                             <ul class="menu-area-main">
-                                                <li> <a href="./index.html#">Accueil</a> </li>
-                                                <li> <a href="./index.html#games">Jeux</a> </li>
-                                                <li> <a href="./index.html#about">À propos</a> </li>
+                                                <li> <a href="./index.html#" data-string="home"></a> </li>
+                                                <li> <a href="./index.html#games" data-string="projects"></a> </li>
+                                                <li> <a href="./index.html#about" data-string="about-me"></a> </li>
                                                 <li> <a href="./Hamstorm.html">Hamstörm</a> </li>
                                                 <li> <a href="./Heritage.html">Héritage</a> </li>
+                                                <li class="active-item"> <a href="./Bambooza.html">Bambooza</a> </li>
                                             </ul>
                                         </nav>
                                     </div>
+                                    <div id="langButton"; data-string="language"></div>
                                 </div>
                             </div>
                         </div>
@@ -95,41 +98,27 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <p data-string="projects-encage-link">
                             <a href="https://www.bambooza.ca/" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3 class="card-title"><strong>Cliquez ici pour visiter la plateforme!</strong>
+                                        <h3 class="card-title" data-string="bambooza-platform"><strong></strong>
                                         </h3>
                                     </div>
                                 </div>
                             </a>
-                        </p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Description de la plateforme</h2>
+                        <h2 data-string="bambooza-desc-title"></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-
-                    <h3>
-                        Bambooza est une plateforme de jeu en ligne, issue d'une formation pour les personnes TDAH en
-                        milieu de travail. Elle a
-                        été conçue par <a href="https://www.pandaslsj.org/">l'Association PANDA Saguenay-Lac-St-Jean</a>
-                        en partenariat avec
-                        <a href="https://www.eckinox.ca/">Eckinox</a> et le studio de développement de jeux vidéo
-                        Saguenéen
-                        <a href="https://totemastudio.com/">Totema Studio</a>. Elle comprend sept jeux différents qui
-                        visent chacun à travailler
-                        certaines difficultés des personnes TDAH.
-                    </h3>
-
+                    <h3 data-string="bambooza-desc"></h3>
                 </div>
             </div>
         </div>
@@ -140,64 +129,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 class="margin_bottom">Ma contribution</h2>
-                        <h3>
-                            Ce projet a été fait en collaboration avec les équipes d'Eckinox et de Totema Studio. Ces
-                            deux équipes se partageaient
-                            des tâches au niveau du développement web et du game design. Pour ma part, j'ai réalisé la
-                            programmation de deux jeux de
-                            la plateforme: <i>La plage de la procrastination</i> et <i>Le puits de l'adaptation</i>. Ces
-                            jeux ont été réalisés
-                            avec Phaser en typescript et avec Vue 3.0. Il y avait également une petite partie de chacun
-                            de
-                            ses jeux à lier avec le "back-end".
-                        </h3>
+                        <h2 class="margin_bottom" data-string="game-contribution-title"></h2>
+                        <h3 data-string="bambooza-contribution-desc"></h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 margin_bottom">
-                    <h2><u>Plage de la procrastination</u></h2>
-                    <h3 style="margin-bottom: 40px;">
-                        La plage de la procrastination est un jeu qui travaille la motivation et la capacité à créer un
-                        environnement propice
-                        au travail des personnes TDAH. Le but est de cliquer sur le plus de crabes possibles en faisant
-                        un maximum de points dans
-                        un temps déterminé. Chaque crabe rapporte un certain nombre de points. Par contre, la plage est
-                        remplie d'obstacles,
-                        derrière lesquels, les crabes peuvent se cacher. À l'aide du balai dans le sac à dos ,qui est un
-                        peu une sorte de sac à
-                        outils, on peut enlever les obstacles et y voir plus clair. Il y a également de la musique pour
-                        ajouter au côté accablant
-                        du jeu.
-                    </h3>
+                    <h2><u data-string="bambooza-beach-title"></u></h2>
+                    <h3 data-string="bambooza-beach-desc" style="margin-bottom: 40px;"></h3>
                     <div class="row">
                         <div class="col-md-6">
-                            <h2>Crabes</h2>
-                            <h3 style="margin-bottom: 40px;">
-                                Lorsqu'on clique sur un crabe, il est renversé et tombe sur son dos. On ne peut ensuite
-                                plus cliquer sur lui
-                                et
-                                obtenir
-                                des points jusqu'à ce qu'il se relève après un certain temps. Les crabes sortent
-                                graduellement du niveau
-                                aléatoirement
-                                et seront tous sortis avant que la moitié du temps soit écoulée.
-                            </h3>
+                            <h2 data-string="bambooza-beach-crabs-title"></h2>
+                            <h3 data-string="bambooza-beach-crabs-desc" style="margin-bottom: 40px;"></h3>
                         </div>
                         <img class="col-md-6" src="images/Bambooza/crabs.gif" style="margin-bottom: 60px;">
                     </div>
 
-                    <h2>Système de pointage</h2>
-                    <h3 style="margin-bottom: 40px;">
-                        Chaque crabe rapporte initialement 100 points. Si le joueur clique rapidement sur un autre crabe
-                        après en avoir déjà cliqué un, avant un certain délai, un combo débute et les points sont
-                        multipliés. Le
-                        multiplicateur ou le
-                        combo va jusqu'à x5, un crabe peut donc valoir 500 points si on est habile et rapide. On perd le
-                        combo
-                        dès qu'on ne clique pas un autre crabe dans les temps.
-                    </h3>
+                    <h2 data-string="bambooza-beach-points-title"></h2>
+                    <h3 data-string="bambooza-beach-points-desc" style="margin-bottom: 40px;"></h3>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <img class="col-md-8" src="images/Bambooza/points.gif" style="margin-bottom: 60px;">
@@ -206,54 +156,18 @@
                     <div class="row">
                         <img class="col-md-6" src="images/Bambooza/broom.gif" style="margin-bottom: 60px;">
                         <div class="col-md-6">
-                            <h2>Obstacles</h2>
-                            <h3 style="margin-bottom: 40px;">
-                                Les obstacles apparaissent au début du niveau et ne peuvent pas être enlevés tant que le
-                                joueur n'obtient
-                                pas le balai.
-                                Après un dialogue, le joueur obtient le balai et peut enlever les obstacles. Lorsqu'il
-                                sélectionne le balai,
-                                le temps
-                                s'arrète dans le jeu pour lui laisser le temps d'enlever les obstacles. Une fois enlevé,
-                                les obstacles ne
-                                réapparaissent
-                                pas.
-                            </h3>
+                            <h2 data-string="bambooza-beach-obstacles-title"></h2>
+                            <h3 data-string="bambooza-beach-obstacles-desc" style="margin-bottom: 40px;"></h3>
                         </div>
                     </div>
 
 
-                    <h2><u>Puits de l'adaptation</u></h2>
-                    <h3 style="margin-bottom: 40px;">
-                        Le puits de l'adaptation est un jeu qui travaille sur la capacité d'adaptation des personnes
-                        TDAH. Dans ce jeu, le joueur
-                        doit construire un mécanisme pour récupérer de l'eau dans le puits. Pour se faire, différents
-                        objets sont disponibles en
-                        bas de l'écran. Le joueur doit trouver une série de combinaisons à faire pour construire
-                        différents objets et finalement
-                        construire le mécanisme pour récupérer l'eau du puits. Il y a également un système de météo
-                        qui peut influencer les
-                        différentes combinaisons possibles. Pour finir, au fur et à mesurer que le joueur fabrique des
-                        objets utiles au mécanisme,
-                        il peut les poser sur le puits pour le réparer.
-                    </h3>
+                    <h2><u data-string="bambooza-well-title"></u></h2>
+                    <h3 data-string="bambooza-well-desc" style="margin-bottom: 40px;"></h3>
                     <div class="row">
                         <div class="col-md-6">
-                            <h2>Système de fabrication</h2>
-                            <h3 style="margin-bottom: 40px;">
-                                Dans le milieu de l'écran, il y a une zone où on peut poser des objets pour en fabriquer
-                                d'autres. Lorsque le joueur
-                                clique sur le bouton fabriquer, on vérifie si la combinaison d'objets forme une recette.
-                                Si oui,
-                                on détruit
-                                les objets utilisés s'ils sont à usage unique et on donne le nouvel objet fabriqué au
-                                joueur.
-                                Le joueur aura des
-                                indications sur quels objets peuvent former une recette sous forme de crochets pour
-                                indiquer les
-                                bons items et de "X"
-                                pour indiquer les mauvais items.
-                            </h3>
+                            <h2 data-string="bambooza-well-craft-title"></h2>
+                            <h3 data-string="bambooza-well-craft-desc" style="margin-bottom: 40px;"></h3>
                         </div>
                         <img class="col-md-6" src="images/Bambooza/craft.gif" style="margin-bottom: 60px;">
                     </div>
@@ -261,34 +175,13 @@
                     <div class="row">
                         <img class="col-md-6" src="images/Bambooza/meteo.gif" style="margin-bottom: 60px;">
                         <div class="col-md-6">
-                            <h2>Système de météo</h2>
-                            <h3 style="margin-bottom: 40px;">
-                                Durant la période de jeu, la météo change continuellement et forme des cycles. À chaque
-                                période de temps, on
-                                passe à la
-                                prochaine météo. Il y a certaines recettes qui peuvent seulement être faites si la
-                                bonne météo est
-                                en cours. Comme par
-                                exemple, pour faire un feu, il faut que la météo soit ensoleillé. Pour empêcher le
-                                joueur de devoir attendre la
-                                météo, il peut
-                                cliquer sur la météo pour la changer lui-même.
-                            </h3>
+                            <h2 data-string="bambooza-well-weather-title"></h2>
+                            <h3 data-string="bambooza-well-weather-desc" style="margin-bottom: 40px;"></h3>
                         </div>
                     </div>
 
-                    <h2>Lunettes</h2>
-                    <h3 style="margin-bottom: 40px;">
-                        Les lunettes permettent d'obtenir des informations sur les objets qui peuvent aider à déterminer
-                        dans quelle
-                        recette ils
-                        sont utilisés. Lorsque le joueur équipe les lunettes et qu'il clique sur un objet, ces
-                        informations sont
-                        affichées. Elles
-                        donnent des indices sur quelle météo est nécessaire, quelle recette l'objet est utilisé ou
-                        encore avec quoi
-                        le combiner.
-                    </h3>
+                    <h2 data-string="bambooza-well-glasses-title"></h2>
+                    <h3 data-string="bambooza-well-glasses-desc" style="margin-bottom: 40px;"></h3>
                     <img class="col-md-12" src="images/Bambooza/lunettes.png" style="margin-bottom: 60px;">
 
                 </div>
@@ -301,23 +194,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 class="margin_bottom">Défis de conception</h2>
-                        <h3>
-                            J'ai eu quelques difficultés avec le système de combo lorsque le joueur clique rapidement
-                            sur des crabes. Je devais faire
-                            en sorte qu'on commence un timer dès que le joueur clique sur un crabe et lorsqu'un autre
-                            crabe est cliqué, vérifier si
-                            ce timer est dans les temps. J'ai aussi eu un peu de difficulté avec la fonction pause
-                            lorsque le balai est sélectionné,
-                            les animations de renversement des crabes ne se mettaient pas sur pause initialement, mais
-                            ça a été réglé assez rapidement.
-                            Au niveau du puits, le plus dûr a été le système de fabrication. Au début, j'avais de la
-                            difficulté à savoir si les objets
-                            utilisés faisaient partie d'une recette et si oui, quelle recette prendre si cet objet
-                            avait plusieurs utilités. Garder
-                            les objets dans le même ordre d'affichage lorsqu'on les bouge et qu'on les ramène a aussi
-                            été plus difficile que prévu.
-                        </h3>
+                        <h2 class="margin_bottom" data-string="game-challenges-title"></h2>
+                        <h3 data-string="bambooza-challenges-desc"></h3>
                     </div>
                 </div>
             </div>
@@ -343,11 +221,11 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="address">
-                                    <h3>Liens rapide</h3>
+                                    <h3 data-string="quick-links"></h3>
                                     <ul class="Menu_footer">
-                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#">Acceuil</a> </li>
-                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#games">Jeux</a> </li>
-                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#about">À propos</a>
+                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#" data-string="home"></a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#games" data-string="my-projects"></a> </li>
+                                        <li><img src="images/3.png" alt="#"> <a href="./index.html#about" data-string="about-me"></a> </li>
                                         </li>
                                     </ul>
                                 </div>

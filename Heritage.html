@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <script src="js/portfolio.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -58,14 +59,16 @@
                                         </a>
                                         <nav class="main-menu">
                                             <ul class="menu-area-main">
-                                                <li> <a href="./index.html#">Accueil</a> </li>
-                                                <li> <a href="./index.html#games">Jeux</a> </li>
-                                                <li> <a href="./index.html#about">À propos</a> </li>
+                                                <li> <a href="./index.html#" data-string="home"></a> </li>
+                                                <li> <a href="./index.html#games" data-string="projects"></a> </li>
+                                                <li> <a href="./index.html#about" data-string="about-me"></a> </li>
                                                 <li> <a href="./Hamstorm.html">Hamstörm</a> </li>
+                                                <li class="active-item"> <a href="./Heritage.html">Héritage</a> </li>
                                                 <li> <a href="./Bambooza.html">Bambooza</a> </li>
                                             </ul>
                                         </nav>
                                     </div>
+                                    <div id="langButton"; data-string="language"></div>
                                 </div>
                             </div>
                         </div>
@@ -95,43 +98,32 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <p data-string="projects-encage-link">
                             <a href="https://chaos-production.itch.io/heritage" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3 class="card-title"><strong>Cliquez ici pour essayer le jeu!</strong></h3>
+                                        <h3 class="card-title" data-string="heritage-itchio"><strong></strong></h3>
                                     </div>
                                 </div>
                             </a>
-                        </p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Description du jeu</h2>
+                        <h2 data-string="game-desc-title"></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 margin_bottom">
-
-                    <h3>Héritage est un jeu narratif dans lequel on incarne une jeune femme qui doit poursuivre la
-                        tradition familiale en capturant des oiseaux pour la
-                        confection de divers articles de vanité. Cette tradition est issue de la compagnie familiale,
-                        une compagnie de plus de 100 ans, qui se spécialise
-                        dans la confection de divers articles et vêtements faits avec des plumes. Dans le jeu, on se
-                        plonge dans la vie de la jeune femme qui doit attraper des oiseaux pour compléter les
-                        commandes des clients de la compagnie familiale.
-                    </h3>
-
+                    <h3 data-string="heritage-desc"></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Trailer du jeu</h2>
+                        <h2 data-string="game-trailer-title"></h2>
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -150,75 +142,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 class="margin_bottom">Ma contribution</h2>
-                        <h3>
-                            Je me suis occupé principalement de la programmation du mouvement de l'oiseau et j'ai
-                            contribué au développement de son comportement. J'ai également fait
-                            l'intégration des commandes dans l'interface utilisateur et j'ai travaillé sur la mécanique de graine.
-                            La suite vous expliquera comment les différentes fonctionnalités sont implémentées.
-                        </h3>
+                        <h2 class="margin_bottom" data-string="game-contribution-title"></h2>
+                        <h3 data-string="heritage-contribution-desc"></h3>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 margin_bottom">
-                    <h2 class=""><u>Intelligence artificielle</u></h2>
-                    <h3>
-                        Quand l'oiseau est
-                        effrayé, il s'enfuit et doit trouver un point de fuite accessible pour lui, en direction opposé
-                        du joueur. S'il n'en trouve pas, il ira en direction
-                        du joueur, mais plus loin. La distance du point de fuite est déterminée en fonction du système
-                        de détection de l'oiseau. Par exemple, si le joueur se
-                        se déplace rapidement, l'oiseau sera plus effrayé et se sauvera plus loin. Lorsqu'il a trouvé
-                        son point de fuite, l'oiseau commence à se déplacer vers
-                        ce dernier et vole dans sa direction. Pour le vol, l'oiseau suit une courbe <a
-                            href="https://easings.net/#easeOutCubic" target="_blank"><i><u>ease-out cubic</u></i></a>
-                        qui détermine sa hauteur en fonction de la progression de son parcours vers le point de fuite.
-                        Nous avons également implémenté de l'évitement d'obstacles
-                        afin que notre oiseau puisse agir naturellement.
-                    </h3>
+                    <h2><u data-string="heritage-ai-title"></u></h2>
+                    <h3 data-string="heritage-ai-desc"></h3>
                     <img class="col-md-12" src="images/Heritage/fleeing-point.png" style="margin-bottom: 20px;">
-                    <h3>
-                        À chaque intervalle de temps lors de son mouvement, l'oiseau trace un rayon dans la direction de
-                        son mouvement qui lui permet de détecter des obstacles.
-                        Lorsque celui-ci touche un objet, il génère des rayons dans un cone devant lui. L'oiseau
-                        choisira la direction d'un rayon qui n'a pas détecté d'obstacles
-                        et qui se rapproche le plus possible de la direction désirée pour se rendre à la destination
-                        (point de fuite). L'oiseau se tourne ensuite vers le nouveau
-                        point et continue son mouvement vers le nouveau point généré. Si l'oiseau ne trouve pas de
-                        direction valide, il étend l'angle de détection d'obstacles et
-                        il génère d'autres rayons afin de trouver une direction valide où il n'y a pas d'obstacles.
-                    </h3>
+                    <h3 data-string="heritage-ai-desc-2"></h3>
                     <img class="col-md-12" src="images/Heritage/bird-raycast.png" style="margin-bottom: 20px;">
-                    <h2 class=""><u>Intégration des commandes avec l'interface utilisateur</u>
-                    </h2>
-                    <h3>
-                        Comme l'objectif du jeu est de remplir des commandes, il est important que celles-ci soient
-                        visibles pour le joueur. Je me suis donc occupé de lier les
-                        fonctionnalités des commandes avec l'interface utilisateur. Premièrement, j'ai créé une interface utilisateur qui permet d'afficher
-                        les différentes commandes et de les compléter. Les commandes
-                        sont générées aléatoirement et je me suis occupé de générer des styles aléatoires également lors
-                        de leur création. Ces styles comprennent les images des
-                        clients ainsi que les différentes textures du papier. J'ai aussi géré l'affichage des conditions
-                        de remplissage des commandes (afficher le nombre et le
-                        type de plume correspondant à chaque commande). J'ai également implémenté cet affichage dans le
-                        HUD. Les différentes interfaces utilisateur s'actualisent au fur et à mesure
-                        que le joueur complète les commandes. À noter que je n'ai pas participé aux design des
-                        différents éléments d'interface, seulement la composition.
-                    </h3>
+                    <h2><u data-string="heritage-orders-title"></u></h2>
+                    <h3 data-string="heritage-orders-desc"></h3>
                     <div class="row">
                         <img class="col-md-6" src="images/Heritage/hud-commandes.png" style="margin-bottom: 20px;">
                         <img class="col-md-6" src="images/Heritage/commandes.png" style="margin-bottom: 20px;">
                     </div>
-                    <h2 class=""><u>Mécanique de graine</u>
-                    </h2>
-                    <h3>
-                        Pour pouvoir capturer les oiseaux qui sont en hauteur, nous avons implémenté une mécanique de graine. Celle-ci permet d'attirer les oiseaux. Ils s'envolent
-                        vers la graine et la mangent pendant un certain temps. J'ai participé à la détection de la graine par l'oiseau et également au mouvement de l'oiseau vers
-                        elle. L'oiseau détecte la graine si elle est dans un certain rayon autour de lui. Ensuite, si son état le permet (il doit être calme et non entrain de
-                        se sauver par exemple) il ira vers la graine et y restera pendant quelques temps. Pendant que l'oiseau mange la graine, il est moins sensible au joueur. Ses
-                        sens sont diminués et il devient plus facile à capturer.
-                    </h3>
+                    <h2><u data-string="heritage-seed-title"></u></h2>
+                    <h3 data-string="heritage-seed-desc"></h3>
                     <div class="row">
                         <img class="col-md-6" src="images/Heritage/bird-seed.png" style="margin-bottom: 20px;">
                         <img class="col-md-6" src="images/Heritage/bird-eating.png" style="margin-bottom: 20px;">
@@ -235,23 +178,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2 class="margin_bottom">Défis de conception</h2>
-                        <h3>
-                            L'intelligence artificielle de l'oiseau était définitivement le plus grand défi de
-                            conception. Nous avons passé beaucoup de temps à déterminer comment
-                            l'oiseau devait agir et de quelle façon il se déplacerait pour que l'oiseau se comporte de
-                            la façon la plus naturelle possible. L'évitement d'obstacles
-                            est la partie où nous avons eu le plus de difficultés. Il était difficile pour nous de
-                            concevoir un système fiable qui allait détecter les différents
-                            obstacles dans le chemin de l'oiseau et qui allait les éviter de façon logique et naturelle.
-                            Nous avions de nombreux bugs durant le développement de ce
-                            système, en voici quelques uns : l'oiseau bougait constamment de gauche à droite devant un
-                            obstacle puisqu'il ne trouvait pas de direction valide, l'oiseau avait
-                            de la difficulté à éviter des obstacles larges, l'oiseau fonçait dans les murs, l'oiseau
-                            restait bloqué, et plein d'autres. Gérer les différents
-                            paramètres de la détection afin de s'assurer que l'oiseau soit assez farouche a aussi été un
-                            autre défi important lié à l'intelligence artificielle.
-                        </h3>
+                        <h2 class="margin_bottom" data-string="game-challenges-title"></h2>
+                        <h3 data-string="heritage-challenges-desc"></h3>
                     </div>
                 </div>
             </div>
@@ -263,18 +191,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Membres de L'équipe</h2>
+                        <h2 data-string="team-title"></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 margin_bottom ">
                     <div class="row">
-                        <h3 class="col-xl-12 col-lg-12 col-md-12 col-sm-12">Voici la liste des membres de l'équipe ainsi
-                            que
-                            leurs
-                            spécialisations dans le projet :</h3>
-
+                        <h3 class="col-xl-12 col-lg-12 col-md-12 col-sm-12" data-string="team-desc"></h3>
                         <div class="col-md-12">
 
                             <ul class="col-md-12 members-list">
