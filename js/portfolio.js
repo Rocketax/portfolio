@@ -155,12 +155,14 @@ const strings = {
 }
 
 window.onload = () => {
-    //Setting default language to french
-    if (localStorage.getItem("language" == undefined)) localStorage.setItem("language", "fr")
-
     if ((urlLang = UrlParamManager.getUrlParam("lang")) != undefined) {
         if (urlLang.toLowerCase() == "fr" || urlLang.toLowerCase() == "en") localStorage.setItem("language", urlLang)
     }
+
+    //Setting default language to french if no language found
+    if (localStorage.getItem("language") == undefined){
+        localStorage.setItem("language", "fr")
+    } 
 
     document.getElementById("langButton").onclick = () => langSwitch()
 
@@ -182,6 +184,5 @@ function updateStrings() {
     document.querySelectorAll("[data-string]")
         .forEach((elm) => {
             elm.innerHTML = strings[localStorage.getItem("language").toLowerCase()][elm.attributes["data-string"].value]
-            console.log(strings[localStorage.getItem("language").toLowerCase()][elm.attributes["data-string"].value])
         })
 }
